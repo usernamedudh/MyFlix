@@ -11,7 +11,7 @@ class User(UserMixin, db.Model):
     password = db.Column(db.String(150), nullable=False)
     email = db.Column(db.String(150), unique=True, nullable=True)
 
-    # Связь с книгами
+    # Связь с книгами..
     books = db.relationship('Book', backref='user', lazy=True)
 
     # Связь с фильмами
